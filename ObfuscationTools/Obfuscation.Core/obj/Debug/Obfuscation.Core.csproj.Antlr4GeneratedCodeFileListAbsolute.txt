@@ -1,0 +1,6 @@
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSLexer.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParser.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParserListener.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParserBaseListener.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParserVisitor.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParserBaseVisitor.cs

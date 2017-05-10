@@ -1,0 +1,10 @@
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\bin\Debug\UI.Console.exe.config
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\obj\Debug\UI.Console.csprojResolveAssemblyReference.cache
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\bin\Debug\UI.Console.exe
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\bin\Debug\UI.Console.pdb
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\bin\Debug\Obfuscation.Core.dll
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\bin\Debug\Antlr4.Runtime.dll
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\bin\Debug\Obfuscation.Core.pdb
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\bin\Debug\Antlr4.Runtime.xml
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\obj\Debug\UI.Console.exe
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\obj\Debug\UI.Console.pdb

@@ -1,0 +1,14 @@
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\Obfuscation.Core.csprojResolveAssemblyReference.cache
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSLexer.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParser.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParserListener.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParserBaseListener.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParserVisitor.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\CSParserBaseVisitor.cs
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\Obfuscation.Core.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\bin\Debug\Obfuscation.Core.dll
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\bin\Debug\Obfuscation.Core.pdb
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\bin\Debug\Antlr4.Runtime.dll
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\bin\Debug\Antlr4.Runtime.xml
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\Obfuscation.Core.dll
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\obj\Debug\Obfuscation.Core.pdb
