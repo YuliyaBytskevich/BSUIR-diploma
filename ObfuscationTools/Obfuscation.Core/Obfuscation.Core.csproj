@@ -38,6 +38,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\CILObfuscatorSetting.cs" />
+    <Compile Include="Configuration\CILObfuscatorSettingsCollection.cs" />
+    <Compile Include="Configuration\CSObfuscatorSetting.cs" />
+    <Compile Include="Configuration\CSObfuscatorSettingsCollection.cs" />
+    <Compile Include="Configuration\ObfuscatorConfigSection.cs" />
     <Compile Include="CSharpAnalysis\CSLexer.g4.cs">
       <DependentUpon>CSLexer.g4</DependentUpon>
     </Compile>
@@ -72,15 +78,22 @@
     <Compile Include="Entities\CSharpIdentifiers\Method.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Namespace.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Property.cs" />
+    <Compile Include="Entities\DetailedSetting.cs" />
     <Compile Include="Entities\IdentifiersGenerator.cs" />
     <Compile Include="Entities\RenameItem.cs" />
     <Compile Include="Entities\RenameItemType.cs" />
     <Compile Include="Entities\RenameTable.cs" />
+    <Compile Include="Entities\CSharpTransformationType.cs" />
+    <Compile Include="Entities\Setting.cs" />
+    <Compile Include="Exceptions\ConfigFormatException.cs" />
+    <Compile Include="Exceptions\InvalidConfigurationException.cs" />
+    <Compile Include="Exceptions\MissingConfigurationException.cs" />
     <Compile Include="Helpers\CodeFormattingHelper.cs" />
     <Compile Include="Helpers\CSIdentifierHelper.cs" />
     <Compile Include="Helpers\FilesHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />
+    <Compile Include="Managers\ConfigurationManager.cs" />
     <Compile Include="Managers\MethodInlineManager.cs" />
     <Compile Include="Managers\RenameManager.cs" />
     <Compile Include="Mappers\CSParserRule.cs" />
@@ -100,6 +113,7 @@
     </Antlr4>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
