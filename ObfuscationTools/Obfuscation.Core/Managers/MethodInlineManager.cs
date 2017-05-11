@@ -32,7 +32,7 @@ namespace Obfuscation.Core.Managers
                         if (targetMethodNode != null)
                         {
                             ProcessMethodMatch(context, targetMethodNode);
-
+                       
                         }
                         else
                         {

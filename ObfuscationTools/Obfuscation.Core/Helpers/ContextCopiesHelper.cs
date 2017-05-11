@@ -1,132 +1,20 @@
-﻿using Antlr4.Runtime;
-using Antlr4.Runtime.Tree;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using Obfuscation.Core.CSharpAnalysis;
+using Antlr4.Runtime;
+using Antlr4.Runtime.Tree;
 
 namespace Obfuscation.Core.Helpers
 {
-    public static class TreeHelper
+    public static class ContextCopiesHelper
     {
-        public static RuleContext GetAncestorNode(RuleContext current, string requiredNodeState)
+        public static RuleContext GetDeepCopy(RuleContext source)
         {
-            var requiredIndexes = Mappers.CSParserState.NameToIndex(requiredNodeState);
-            var ancestor = current.parent;
-            while (ancestor != null && !requiredIndexes.Contains(ancestor.invokingState))
-            {
-                ancestor = ancestor.parent;
-            }
-
-            return ancestor;
-        }
-
-        public static IEnumerable<RuleContext> GetDescendantNodes(RuleContext current, string requiredNodeState)
-        {
-            var requiredIndexes = Mappers.CSParserState.NameToIndex(requiredNodeState);
-            List<RuleContext> nodes = new List<RuleContext>();
-
-            return CheckChildrenIndexes(nodes, current, requiredIndexes);
-        }
-
-
-        public static IEnumerable<RuleContext> GetDescendantNodesWithText(RuleContext current, string requredText)
-        {
-            List<RuleContext> nodes = new List<RuleContext>();
-
-            return CheckChildrenText(nodes, current, requredText);
-        }
-
-        public static RuleContext GetRoot(RuleContext current)
-        {
-            RuleContext result = current;
-            while (result.parent != null)
-            {
-                result = result.parent;
-            }
-
-            return result;
-        }
-
-        public static RuleContext FindDescendantIndentifierNode(RuleContext current, string identifierName)
-        {
-            RuleContext descendant = null;
-
-            for (int i = 0; i < current.ChildCount; i++)
-            {
-                if (!(current.GetChild(i) is ITerminalNode))
-                {
-                    if (current.GetChild(i).ChildCount == 1)
-                    {
-                        if (current.GetChild(i).GetChild(0).GetText() == identifierName)
-                        {
-                            return (RuleContext)current.GetChild(i);
-                        }
-                    }
-                    else
-                    {
-                        return FindDescendantIndentifierNode((RuleContext)current.GetChild(i), identifierName);
-                    }
-                }
-            }
-
-            return descendant;
-        }
-
-        public static RuleContext GetDeepCopy(RuleContext sourceNode)
-        {
-            var copy = GetNodeCopy(sourceNode);
-            CopyChildren(sourceNode, copy);
+            var copy = GetCopy(source);
+            CopyChildren(source, copy);
 
             return copy;
         }
 
-        private static IEnumerable<RuleContext> CheckChildrenIndexes(List<RuleContext> result, RuleContext current, IEnumerable<int> requiredIndexes)
-        {
-            if (current != null)
-            {
-                for (int i = 0; i < current.ChildCount; i++)
-                {
-                    if (!(current.GetChild(i) is ITerminalNode))
-                    {
-                        var descendant = (RuleContext)current.GetChild(i);
-                        if (requiredIndexes.Contains(descendant.invokingState))
-                        {
-                            result.Add(descendant);
-                        }
-                        else
-                        {
-                            CheckChildrenIndexes(result, descendant, requiredIndexes);
-                        }
-                    }
-                }
-            }
-
-            return result;
-        }
-
-        private static IEnumerable<RuleContext> CheckChildrenText(List<RuleContext> result, RuleContext current, string requiredText)
-        {
-            if (current != null)
-            {
-                for (int i = 0; i < current.ChildCount; i++)
-                {
-                    if (!(current.GetChild(i) is ITerminalNode))
-                    {
-                        var descendant = (RuleContext)current.GetChild(i);
-                        if (descendant.GetText() == requiredText)
-                        {
-                            result.Add(descendant);
-                        }
-                        else
-                        {
-                            CheckChildrenText(result, descendant, requiredText);
-                        }
-                    }
-                }
-            }
-
-            return result;
-        }
         private static void CopyChildren(RuleContext original, RuleContext result)
         {
             for (int i = 0; i < original.ChildCount; i++)
@@ -134,8 +22,8 @@ namespace Obfuscation.Core.Helpers
                 var child = original.GetChild(i);
                 if (!(child is ITerminalNode))
                 {
-                    var childContext = child as RuleContext;
-                    var childCopy = GetNodeCopy(childContext);
+                    var childContext = child as RuleContext; 
+                    var childCopy = GetCopy(childContext);
                     ((ParserRuleContext)result).AddChild(childCopy);
 
                     if (child.ChildCount > 0)
@@ -150,12 +38,12 @@ namespace Obfuscation.Core.Helpers
             }
         }
 
-        private static RuleContext GetNodeCopy(RuleContext current)
+
+        public static RuleContext GetCopy(RuleContext current)
         {
             var parent = (ParserRuleContext)current.parent;
             var invokingState = current.invokingState;
 
-            #region return same type instance
             switch (current.GetType().Name)
             {
                 case "Compilation_unitContext": { return new CSParser.Compilation_unitContext(parent, current.invokingState); }
@@ -402,7 +290,6 @@ namespace Obfuscation.Core.Helpers
                 case "Method_member_nameContext": { return new CSParser.Method_member_nameContext(parent, invokingState); }
                 default: return null;
             }
-            #endregion
         }
     }
 }

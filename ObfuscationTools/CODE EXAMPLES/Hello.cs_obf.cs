@@ -3,41 +3,46 @@ using System;
  using System.Linq;
  using System.Text;
  using System.Threading.Tasks;
- using a0.a1;
+ using Antlr_Test_1.Greetings;
  
-namespace a0.a1 {
- public class a2 {
- public string a3 {
+namespace Antlr_Test_1.Greetings {
+ public class Hello {
+ public string SomeProperty {
  get;
  private set;
  
-} public string a4;
- private const int a5 = 1;
- public a2 ( ) {
+} public string userName;
+ private const int x = 1;
+ public Hello ( ) {
  Console.WriteLine ( "constructor" );
  
-} public void a6 ( ) {
- int a5 = 1;
- const int a7 = 2;
+} public void SayHello ( ) {
+ int x = 1;
+ const int y = 20;
+ for ( int i = 0;
+ i < y;
+ i ++ ) {
  Console.WriteLine ( "Hello! =)" );
  
-} public void a6 ( string a4 ) {
- Console.WriteLine ( "Hello, " + a4 + "! =)" );
+} 
+} public void SayHello ( string userName ) {
+ Console.WriteLine ( "Hello, " + userName + "! =)" );
  
 } 
-} public static class a8 {
- public static void a9 ( ) {
+} public static class Static {
+ public static void DoNothing ( ) {
  
 } 
 } 
 } 
-namespace a0.a10 {
- public class a11 {
- private a2 a12 = new a2 ( );
- public a11 ( a2 a13 ) {
- a8.a9 ( );
- var a14 = a12.a3;
- a12.a4 = "Ololosh";
+namespace Antlr_Test_1.Test {
+ public class Test {
+ private Hello greetings = new Hello ( );
+ public Test ( Hello h ) {
+ greetings.SayHello ( );
+ Static.DoNothing ( );
+ var something = greetings.SomeProperty;
+ greetings.userName = "Ololosh";
  
 } 
 } 

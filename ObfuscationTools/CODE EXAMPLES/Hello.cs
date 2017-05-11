@@ -21,8 +21,12 @@ namespace Antlr_Test_1.Greetings
         public void SayHello()
         {
             int x = 1;
-            const int y = 2;
-            Console.WriteLine("Hello! =)");
+            const int y = 20;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Hello! =)");
+            }
         }
 
         public void SayHello(string userName)

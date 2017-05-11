@@ -11,7 +11,7 @@ namespace Obfuscation.Core.Configuration
             set { this["transformation"] = value; }
         }
 
-        [ConfigurationProperty("enabled", DefaultValue = "true", IsKey = false, IsRequired = true)]
+        [ConfigurationProperty("enabled", DefaultValue = "false", IsKey = false, IsRequired = true)]
         public string TransformationIsEnabled
         {
             get { return (string)this["enabled"]; }

@@ -31,6 +31,12 @@ namespace Obfuscation.Core
                 PrintPretty(tree, "", true);
 
 
+                if (config.LoopUnrolling.IsEnabled)
+                {
+                    var loopUnrollingVisitor = new LoopUnrollingVisitor();
+                    tree = loopUnrollingVisitor.Visit(tree);
+                }
+
                 if (config.FunctionInlining.IsEnabled)
                 {
                     var methodInlineVisitor = new MethodInlineVisitor();
