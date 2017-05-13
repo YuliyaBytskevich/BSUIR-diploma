@@ -2,7 +2,7 @@
 
 namespace Obfuscation.Core.Configuration
 {
-    public class CSObfuscatorSetting : ConfigurationElement
+    internal class CSObfuscatorSetting : ConfigurationElement
     {
         [ConfigurationProperty("transformation", DefaultValue = "", IsKey = true, IsRequired = true)]
         public string Transformation

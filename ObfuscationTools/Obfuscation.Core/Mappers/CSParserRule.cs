@@ -1,6 +1,6 @@
 ﻿namespace Obfuscation.Core.Mappers
 {
-    public static class CSParserRule
+    internal static class CSParserRule
     {
         public static int NameToIndex(string ruleName)
         {

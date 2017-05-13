@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Obfuscation.Core.Helpers
 {
-    public static class CSIdentifierHelper
+    internal static class CSIdentifierHelper
     {
         private static CommonTokenFactory tokenFactory = new CommonTokenFactory();
         

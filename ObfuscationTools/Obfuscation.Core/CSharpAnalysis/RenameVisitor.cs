@@ -4,7 +4,7 @@ using Obfuscation.Core.Managers;
 
 namespace Obfuscation.Core.CSharpAnalysis
 {
-    public class RenameVisitor : CSParserBaseVisitor<Root>
+    internal class RenameVisitor : CSParserBaseVisitor<Root>
     {
         protected override Root DefaultResult { get { return root; } }
         private Root root = null;

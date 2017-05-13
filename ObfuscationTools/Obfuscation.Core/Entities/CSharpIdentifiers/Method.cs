@@ -8,7 +8,7 @@ using Antlr4.Runtime;
 
 namespace Obfuscation.Core.Entities.CSharpIdentifiers
 {
-    public class Method : Identifier
+    internal class Method : Identifier
     {
         private List<string> ignoreMethods = new List<string>() { "Main", "ToString", "GetHashCode", "Equals", "GetType"};
 

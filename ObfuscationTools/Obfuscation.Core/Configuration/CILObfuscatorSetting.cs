@@ -2,7 +2,7 @@
 
 namespace Obfuscation.Core.Configuration
 {
-    public class CILObfuscatorSetting : ConfigurationElement
+    internal class CILObfuscatorSetting : ConfigurationElement
     {
         [ConfigurationProperty("transformation", DefaultValue = "", IsKey = true, IsRequired = true)]
         public string Transformation

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Obfuscation.Core.Entities
 {
-    public class DetailedSetting: Setting
+    internal class DetailedSetting: Setting
     {
         public string Details { get; private set; } 
 

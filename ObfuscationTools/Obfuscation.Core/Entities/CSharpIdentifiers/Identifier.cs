@@ -5,7 +5,7 @@ using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
 
 namespace Obfuscation.Core.Entities.CSharpIdentifiers
 {
-    public abstract class Identifier
+    internal abstract class Identifier
     {
         protected Root root = null;
         protected RenameItem renamedItem = null;

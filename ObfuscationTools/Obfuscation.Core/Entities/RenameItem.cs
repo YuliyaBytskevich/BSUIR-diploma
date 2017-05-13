@@ -1,6 +1,6 @@
 ﻿namespace Obfuscation.Core.Entities
 {
-    public class RenameItem
+    internal class RenameItem
     {
         public RenameItemType Type { get; private set; }
 

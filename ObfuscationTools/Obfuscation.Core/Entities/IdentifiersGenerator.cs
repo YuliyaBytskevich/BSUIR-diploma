@@ -1,6 +1,6 @@
 ﻿namespace Obfuscation.Core.Entities
 {
-    public static class IdentifiersGenerator
+    internal static class IdentifiersGenerator
     {
         private static string basis;
         private static int startNumber = 0;

@@ -3,7 +3,7 @@ using Obfuscation.Core.Managers;
 
 namespace Obfuscation.Core.CSharpAnalysis
 {
-    class LoopUnrollingVisitor : CSParserBaseVisitor<Root>
+    internal class LoopUnrollingVisitor : CSParserBaseVisitor<Root>
     {
         protected override Root DefaultResult { get { return root; } }
         private Root root = null;

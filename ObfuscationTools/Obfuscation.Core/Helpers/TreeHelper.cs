@@ -6,7 +6,7 @@ using Obfuscation.Core.CSharpAnalysis;
 
 namespace Obfuscation.Core.Helpers
 {
-    public static class TreeHelper
+    internal static class TreeHelper
     {
         public static RuleContext GetAncestorNode(RuleContext current, string requiredNodeState)
         {

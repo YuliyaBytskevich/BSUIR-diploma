@@ -5,7 +5,7 @@ using Antlr4.Runtime.Tree;
 
 namespace Obfuscation.Core.Helpers
 {
-    public static class ContextCopiesHelper
+    internal static class ContextCopiesHelper
     {
         public static RuleContext GetDeepCopy(RuleContext source)
         {

@@ -7,7 +7,7 @@ using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
 
 namespace Obfuscation.Core.Managers
 {
-    public static class RenameManager
+    internal static class RenameManager
     {
         public static void TryToRenameIdentifier(CSParser.IdentifierContext context, Root rootContext)
         {

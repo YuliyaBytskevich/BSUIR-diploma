@@ -4,7 +4,7 @@ using Obfuscation.Core.Helpers;
 
 namespace Obfuscation.Core.Entities
 {
-    public static class RenameTable
+    internal static class RenameTable
     {
         private static List<RenameItem> collection = new List<RenameItem>();
 

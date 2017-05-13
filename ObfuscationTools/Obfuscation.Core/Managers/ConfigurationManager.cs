@@ -4,7 +4,7 @@ using Obfuscation.Core.Entities;
 
 namespace Obfuscation.Core.Managers
 {
-    public class ConfigurationManager
+    internal class ConfigurationManager
     {
         private ObfuscatorConfigSection config = ObfuscatorConfigSection.GetConfig();
 

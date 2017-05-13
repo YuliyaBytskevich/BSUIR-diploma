@@ -100,6 +100,8 @@
     <Compile Include="Helpers\FilesHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />
+    <Compile Include="ICilObfuscator.cs" />
+    <Compile Include="ICSharpObfuscator.cs" />
     <Compile Include="Managers\BogusClassesManager.cs" />
     <Compile Include="Managers\ConfigurationManager.cs" />
     <Compile Include="Managers\ConstantStringsManager.cs" />

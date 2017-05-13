@@ -7,7 +7,7 @@ using System.Configuration;
 
 namespace Obfuscation.Core.Configuration
 {
-    public class ObfuscatorConfigSection: ConfigurationSection
+    internal class ObfuscatorConfigSection: ConfigurationSection
     {
         [ConfigurationProperty("CSharpTransformationSettings", IsDefaultCollection = false)]
         [ConfigurationCollection(typeof(CSObfuscatorSettingsCollection), AddItemName = "add")]

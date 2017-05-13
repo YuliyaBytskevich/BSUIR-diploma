@@ -3,7 +3,7 @@
 namespace Obfuscation.Core.Configuration
 {
     [ConfigurationCollection(typeof(CILObfuscatorSetting))]
-    public class CILObfuscatorSettingsCollection : ConfigurationElementCollection
+    internal class CILObfuscatorSettingsCollection : ConfigurationElementCollection
     {
         public new CILObfuscatorSetting this[string responseString]
         {

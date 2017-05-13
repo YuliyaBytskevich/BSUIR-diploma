@@ -3,7 +3,7 @@
 namespace Obfuscation.Core.Configuration
 {
     [ConfigurationCollection(typeof(CSObfuscatorSetting))]
-    public class CSObfuscatorSettingsCollection: ConfigurationElementCollection
+    internal class CSObfuscatorSettingsCollection: ConfigurationElementCollection
     {
         public new CSObfuscatorSetting this[string responseString]
         {

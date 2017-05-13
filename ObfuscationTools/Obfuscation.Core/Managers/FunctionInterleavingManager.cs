@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Obfuscation.Core.Managers
 {
-    class FunctionInterleavingManager
+    internal class FunctionInterleavingManager
     {
     }
 }

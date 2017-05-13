@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Obfuscation.Core.CilAnalysis
 {
-    class ControlFlowRestructurer
+    internal class ControlFlowRestructurer
     {
     }
 }

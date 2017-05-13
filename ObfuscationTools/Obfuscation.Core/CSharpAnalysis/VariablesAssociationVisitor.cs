@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Obfuscation.Core.CSharpAnalysis
 {
-    class VariablesAssociationVisitor
+    internal class VariablesAssociationVisitor
     {
     }
 }

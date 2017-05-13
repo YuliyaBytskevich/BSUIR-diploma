@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace Obfuscation.Core.Helpers
 {
-    public static class FilesHelper
+    internal static class FilesHelper
     {
         public static string ReadFile(string path)
         {

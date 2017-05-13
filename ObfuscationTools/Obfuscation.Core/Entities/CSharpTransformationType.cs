@@ -1,4 +1,4 @@
-﻿public enum CSharpTransformationType
+﻿internal enum CSharpTransformationType
 {
     Renamig,
     FunctionInlining,

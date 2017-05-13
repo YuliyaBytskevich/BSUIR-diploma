@@ -3,7 +3,7 @@ using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
 
 namespace Obfuscation.Core.Entities.CSharpIdentifiers
 {
-    public class LocalVariable : Interface
+    internal class LocalVariable : Interface
     {
         public LocalVariable(Root root) : base(root) { }
 

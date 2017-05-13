@@ -2,7 +2,7 @@
 
 namespace Obfuscation.Core.Helpers
 {
-    public static class CodeFormattingHelper
+    internal static class CodeFormattingHelper
     {
         public static string CorrectCSFormatting(string source)
         {

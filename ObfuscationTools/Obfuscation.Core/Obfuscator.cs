@@ -9,16 +9,18 @@ using Obfuscation.Core.Helpers;
 using Obfuscation.Core.Entities;
 using System.IO;
 using Obfuscation.Core.Managers;
+using System.Collections.Generic;
 
 namespace Obfuscation.Core
 {
-    public static class Obfuscator
+    public class Obfuscator: ICSharpObfuscator, ICilObfuscator
     {
         private static ConfigurationManager config = null;
         private static string code = null;
         private static CSParser parser = null;
 
-        public static void ObfuscateCSharpCode(string cSharpFilePath)
+        #region ICSharpObfuscator members
+        public void ObfuscateCSharpCode(string cSharpFilePath)
         {
             config = new ConfigurationManager();
             if (config != null)
@@ -64,7 +66,75 @@ namespace Obfuscation.Core
             }
         }
 
-        private static Root ParseCode(string code)
+        public string RenameIdentifiers(string cSharpCode, string identifierBase = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string InlineMethods(string cSharpCode, double inliningCoefficient = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string UnrollLoops(string cSharpCode, double unrollingCoefficient = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string InterleaveFuctions(string cSharpCode, int interleavesCount = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AddRedundantCode(string cSharpCode, int redundantCodePercent = 10)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string EncryptConstantStrings(string cSharpCode, string key = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AssociateVariables(string cSharpCode, IEnumerable<string> types = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AddBogusClasses(string cSharpCode, int bogusClassesCount = 1)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region ICilObfuscator members
+        public void ObfuscateCilCode(string exeFilePath)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string RestructControlFlow(string cilCode)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AddRedundantCode(string cilCode)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AddUnreachableCode(string cilCode)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AddUnconditionalTransition(string cilCode)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        private Root ParseCode(string code)
         {
             var lexer = new CSLexer(new AntlrInputStream(code));
             CommonTokenStream tokenStream = new CommonTokenStream(lexer);
@@ -72,7 +142,7 @@ namespace Obfuscation.Core
             return parser.compilation_unit();
         }
 
-        private static string ReadSources(string path)
+        private string ReadSources(string path)
         {
             var extension = Path.GetExtension(path);
             switch (extension)
@@ -88,8 +158,7 @@ namespace Obfuscation.Core
             }
         }
 
-
-        static void PrintPretty(IParseTree node, string indent, bool last)
+        private void PrintPretty(IParseTree node, string indent, bool last)
         {
             Console.Write(indent);
             if (last)

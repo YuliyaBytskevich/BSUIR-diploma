@@ -1,6 +1,6 @@
 ﻿namespace Obfuscation.Core.Mappers
 {
-    public static class CSParserState
+    internal static class CSParserState
     {
         public static string IndexToName(int stateCode)
         {

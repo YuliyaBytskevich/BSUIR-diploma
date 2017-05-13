@@ -3,7 +3,7 @@ using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
 
 namespace Obfuscation.Core.CSharpAnalysis
 {
-    public class PrintVisitor : CSParserBaseVisitor<string>
+    internal class PrintVisitor : CSParserBaseVisitor<string>
     {
         private string result = "";
         protected override string DefaultResult { get { return result; } }

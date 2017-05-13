@@ -9,7 +9,7 @@ using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
 
 namespace Obfuscation.Core.Managers
 {
-    public static class MethodInlineManager
+    internal static class MethodInlineManager
     {
         private static CommonTokenFactory tokenFactory = new CommonTokenFactory();
 

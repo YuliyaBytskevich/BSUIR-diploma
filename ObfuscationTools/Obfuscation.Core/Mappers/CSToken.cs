@@ -1,6 +1,6 @@
 ﻿namespace Obfuscation.Core.Mappers
 {
-    public static class CSToken
+    internal static class CSToken
     {
         public static int TypeNameToIndex(string name)
         {

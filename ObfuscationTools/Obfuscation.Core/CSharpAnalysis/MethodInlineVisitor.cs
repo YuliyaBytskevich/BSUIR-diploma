@@ -3,7 +3,7 @@ using Obfuscation.Core.Managers;
 
 namespace Obfuscation.Core.CSharpAnalysis
 {
-    public class MethodInlineVisitor : CSParserBaseVisitor<Root>
+    internal class MethodInlineVisitor : CSParserBaseVisitor<Root>
     {
         protected override Root DefaultResult { get { return root; } }
         private Root root = null;

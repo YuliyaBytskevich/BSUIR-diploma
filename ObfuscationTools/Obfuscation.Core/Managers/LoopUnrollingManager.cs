@@ -8,7 +8,7 @@ using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
 
 namespace Obfuscation.Core.Managers
 {
-    public static class LoopUnrollingManager
+    internal static class LoopUnrollingManager
     {
         public static void UnrollFor(RuleContext context)
         {

@@ -1,6 +1,6 @@
 ﻿namespace Obfuscation.Core.Helpers
 {
-    public static class StringHelper
+    internal static class StringHelper
     {
         public static string FitLength(string source, int numOfCharacters, char fillingChar = ' ')
         {

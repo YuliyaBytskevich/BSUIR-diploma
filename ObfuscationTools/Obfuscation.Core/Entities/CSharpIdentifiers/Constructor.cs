@@ -4,7 +4,7 @@ using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
 
 namespace Obfuscation.Core.Entities.CSharpIdentifiers
 {
-    public class Constructor : Identifier
+    internal class Constructor : Identifier
     {
         public Constructor(Root root) : base(root) { }
 
