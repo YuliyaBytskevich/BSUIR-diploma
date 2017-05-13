@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CilAnalysis\CodeRestructurer.cs" />
+    <Compile Include="CilAnalysis\ControlFlowRestructurer.cs" />
     <Compile Include="Configuration\CILObfuscatorSetting.cs" />
     <Compile Include="Configuration\CILObfuscatorSettingsCollection.cs" />
     <Compile Include="Configuration\CSObfuscatorSetting.cs" />
@@ -63,12 +65,11 @@
       <DependentUpon>CSParser.g4</DependentUpon>
     </Compile>
     <Compile Include="CSharpAnalysis\FunctionsInterleavingVisitor.cs" />
-    <Compile Include="CSharpAnalysis\IdentifiersVisitor.cs" />
     <Compile Include="CSharpAnalysis\LoopUnrollingVisitor.cs" />
     <Compile Include="CSharpAnalysis\MethodInlineVisitor.cs" />
     <Compile Include="CSharpAnalysis\PrintVisitor.cs" />
     <Compile Include="CSharpAnalysis\RenameVisitor.cs" />
-    <Compile Include="CSharpAnalysis\TestVisitor.cs" />
+    <Compile Include="CSharpAnalysis\VariablesAssociationVisitor.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Arg.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Class.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Constant.cs" />
@@ -99,10 +100,15 @@
     <Compile Include="Helpers\FilesHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />
+    <Compile Include="Managers\BogusClassesManager.cs" />
     <Compile Include="Managers\ConfigurationManager.cs" />
+    <Compile Include="Managers\ConstantStringsManager.cs" />
+    <Compile Include="Managers\FunctionInterleavingManager.cs" />
     <Compile Include="Managers\LoopUnrollingManager.cs" />
     <Compile Include="Managers\MethodInlineManager.cs" />
+    <Compile Include="Managers\RedundantCodeManager.cs" />
     <Compile Include="Managers\RenameManager.cs" />
+    <Compile Include="Managers\VariablesAssociationManager.cs" />
     <Compile Include="Mappers\CSParserRule.cs" />
     <Compile Include="Mappers\CSParserState.cs" />
     <Compile Include="Mappers\CSToken.cs" />
