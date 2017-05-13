@@ -1,0 +1,5 @@
+D:\VS Projects\FruitExampleConsole\FruitExampleConsole\bin\Debug\FruitExampleConsole.exe.config
+D:\VS Projects\FruitExampleConsole\FruitExampleConsole\bin\Debug\FruitExampleConsole.exe
+D:\VS Projects\FruitExampleConsole\FruitExampleConsole\bin\Debug\FruitExampleConsole.pdb
+D:\VS Projects\FruitExampleConsole\FruitExampleConsole\obj\Debug\FruitExampleConsole.exe
+D:\VS Projects\FruitExampleConsole\FruitExampleConsole\obj\Debug\FruitExampleConsole.pdb

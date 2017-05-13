@@ -53,12 +53,16 @@
     <Compile Include="Configuration\CSObfuscatorSetting.cs" />
     <Compile Include="Configuration\CSObfuscatorSettingsCollection.cs" />
     <Compile Include="Configuration\ObfuscatorConfigSection.cs" />
+    <Compile Include="CSharpAnalysis\ClassesHierarchyVisitor.cs" />
+    <Compile Include="CSharpAnalysis\CodeRestructuringVisitor.cs" />
+    <Compile Include="CSharpAnalysis\ConstantStringsVisitor.cs" />
     <Compile Include="CSharpAnalysis\CSLexer.g4.cs">
       <DependentUpon>CSLexer.g4</DependentUpon>
     </Compile>
     <Compile Include="CSharpAnalysis\CSParser.g4.cs">
       <DependentUpon>CSParser.g4</DependentUpon>
     </Compile>
+    <Compile Include="CSharpAnalysis\FunctionsInterleavingVisitor.cs" />
     <Compile Include="CSharpAnalysis\IdentifiersVisitor.cs" />
     <Compile Include="CSharpAnalysis\LoopUnrollingVisitor.cs" />
     <Compile Include="CSharpAnalysis\MethodInlineVisitor.cs" />

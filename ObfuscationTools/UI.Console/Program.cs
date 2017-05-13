@@ -11,9 +11,10 @@ namespace UI.Console
     {
         static void Main(string[] args)
         {
-            // ObfuscationTools.Obfuscator.ObfuscateCSharpCode(@"D:\VS Projects\Antlr_Test_1\CODE EXAMPLES\Hello.cs");
-            Obfuscator.ObfuscateCSharpCode(@"C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\Hello.cs");
+            //Obfuscator.ObfuscateCSharpCode(@"C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\Hello.cs");
+            Obfuscator.ObfuscateCSharpCode(@"C: \Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\FruitExampleConsole.sln");
 
+            
             System.Console.ReadKey();
         }
     }

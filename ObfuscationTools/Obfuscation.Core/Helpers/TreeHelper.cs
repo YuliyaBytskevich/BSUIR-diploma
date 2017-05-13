@@ -258,7 +258,7 @@ namespace Obfuscation.Core.Helpers
                 case "DeclarationStatementContext": { return new CSParser.DeclarationStatementContext((CSParser.StatementContext)current); }
                 case "Local_variable_declarationContext": { return new CSParser.Local_variable_declarationContext(parent, invokingState); }
                 case "Local_constant_declarationContext": { return new CSParser.Local_constant_declarationContext(parent, invokingState); }
-                case "EmbeddedStatementContext": { return new CSParser.EmbeddedStatementContext((CSParser.StatementContext)parent); }
+                case "EmbeddedStatementContext": { return new CSParser.EmbeddedStatementContext((CSParser.StatementContext)current); }
                 case "Embedded_statementContext": { return new CSParser.Embedded_statementContext(parent, invokingState); }
                 case "LabeledStatementContext": { return new CSParser.LabeledStatementContext((CSParser.StatementContext)current); }
                 case "Simple_embedded_statementContext": { return new CSParser.Simple_embedded_statementContext(parent, invokingState); }

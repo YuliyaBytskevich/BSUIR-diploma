@@ -3,6 +3,7 @@ using Antlr4.Runtime.Tree;
 using Obfuscation.Core.CSharpAnalysis;
 using Obfuscation.Core.Entities;
 using Obfuscation.Core.Helpers;
+using System.Collections.Generic;
 using System.Linq;
 using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
 
@@ -11,9 +12,9 @@ namespace Obfuscation.Core.Managers
     public static class MethodInlineManager
     {
         private static CommonTokenFactory tokenFactory = new CommonTokenFactory();
-        
+
         public static void Inline(CSParser.Method_invocationContext context, Root root)
-        {          
+        {
             if (Mappers.CSParserState.NameToIndex("member_access").Contains(((RuleContext)context.parent.GetChild(1)).invokingState))
             {
                 var memberAccessNode = (RuleContext)context.parent.GetChild(1);
@@ -32,7 +33,6 @@ namespace Obfuscation.Core.Managers
                         if (targetMethodNode != null)
                         {
                             ProcessMethodMatch(context, targetMethodNode);
-                       
                         }
                         else
                         {
@@ -56,45 +56,45 @@ namespace Obfuscation.Core.Managers
                     }
                 }
             }
-
-
         }
 
         private static void ProcessMethodMatch(CSParser.Method_invocationContext context, RuleContext targetMethodNode)
         {
-            var methodBlockNode = (RuleContext)TreeHelper.GetDescendantNodes(targetMethodNode, "block").First().GetChild(1); // without brackets
-
-            var statementNode = (CSParser.StatementContext)TreeHelper.GetAncestorNode(context, "statement");
-
-            var copy = new CSParser.Statement_listContext(statementNode, methodBlockNode.invokingState);
-            copy.CopyFrom((ParserRuleContext)methodBlockNode);
-
-            //IEnumerable<RuleContext> argumentsNodes = null;
-            //if(context.ChildCount == 3)
-            //{
-            //    argumentsNodes = TreeHelper.GetDescendantNodes(context, "argument");
-            //}
-
-
-            statementNode.RemoveLastChild();
-            statementNode.AddChild(copy);
-
-            // check if we need to replace 'this' with instance variable
-            var thisNodes = TreeHelper.GetDescendantNodesWithText(statementNode, "this");
-            if (thisNodes != null && thisNodes.Count() > 0)
+            var returnType = targetMethodNode.parent.GetChild(0).GetText();
+            if (returnType == "void")
             {
-                var instanceVariableName = context.parent.GetChild(0).GetChild(0).GetText();
-                foreach (var thisNode in thisNodes)
-                {
-                    //var thisNodeParent = (CSParser.Primary_expression_startContext)thisNode.parent;
-                    //thisNodeParent.RemoveLastChild();
-                    ////thisNodeParent.AddChild()
-                    var newLeaf = new TerminalNodeImpl(tokenFactory.Create(Mappers.CSToken.TypeNameToIndex("identifier"), instanceVariableName));
-                    ((CSParser.ThisReferenceExpressionContext)thisNode).RemoveLastChild();
-                    ((CSParser.ThisReferenceExpressionContext)thisNode).AddChild(newLeaf);
-                }
-            }
+                var methodBlockNode = (RuleContext)TreeHelper.GetDescendantNodes(targetMethodNode, "block").First().GetChild(1); // body without brackets
+                var copy = TreeHelper.GetDeepCopy(methodBlockNode);
 
+                var statementNode = (CSParser.StatementContext)TreeHelper.GetAncestorNode(context, "statement");
+                statementNode.RemoveLastChild();
+                statementNode.AddChild(copy);
+
+                // check if we need to replace 'this' with instance variable
+                var thisNodes = TreeHelper.GetDescendantNodesWithText(copy, "this");
+                if (thisNodes != null && thisNodes.Count() > 0)
+                {
+                    var instanceVariableName = context.parent.GetChild(0).GetChild(0).GetText();
+                    foreach (var thisNode in thisNodes)
+                    {
+                        var newLeaf = new TerminalNodeImpl(tokenFactory.Create(Mappers.CSToken.TypeNameToIndex("identifier"), instanceVariableName));
+                        ((CSParser.ThisReferenceExpressionContext)thisNode).RemoveLastChild();
+                        ((CSParser.ThisReferenceExpressionContext)thisNode).AddChild(newLeaf);
+                    }
+                }
+
+                // check if we need to replace argument names with their values
+                IEnumerable<RuleContext> argumentsNodes = null;
+                if (context.ChildCount == 3)
+                {
+                    argumentsNodes = TreeHelper.GetDescendantNodes(context, "argument");
+                }
+
+
+
+
+
+            }
         }
     }
 }
