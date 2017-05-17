@@ -27,7 +27,6 @@ namespace Obfuscation.Core
             if (config != null)
             {
                 code = ReadSources(cSharpFilePath);
-                Console.WriteLine(code);
 
                 if (config.ConstantStringsEncryption.IsEnabled)
                 {
@@ -35,8 +34,8 @@ namespace Obfuscation.Core
                 }
 
                 var tree = ParseCode(code);
-                Console.WriteLine("BEFORE: ");
-                PrintPretty(tree, "", true);
+                //Console.WriteLine("BEFORE: ");
+                //PrintPretty(tree, "", true);
 
 
 
@@ -67,16 +66,13 @@ namespace Obfuscation.Core
 
                 // tree -> text 
                 var printVisitor = new PrintVisitor();
-                //var obfuscated = printVisitor.Visit(renamedTree);
                 var obfuscated = printVisitor.Visit(tree);
 
                 Console.WriteLine("-------------------------------------------------------\n\nAFTER:\n");
 
-                //PrintPretty(tree, "", true);
+                PrintPretty(tree, "", true);
                 Console.WriteLine(CodeFormattingHelper.CorrectCSFormatting(obfuscated));
                 FilesHelper.WriteToFile(CodeFormattingHelper.CorrectCSFormatting(obfuscated), cSharpFilePath + "_obf.cs");
-
-                //PrintPretty(treeVithInlinedMethods, "", true);
 
                 Console.WriteLine(RenameTable.ToString());
             }
