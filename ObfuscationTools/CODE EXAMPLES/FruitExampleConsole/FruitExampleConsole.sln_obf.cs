@@ -4,64 +4,65 @@ using System;
  using System.Text;
  using System.Threading.Tasks;
  
-namespace 1Iliil3I4LL11ii5Il8I90 {
- public class 1Iliil3I4LL11ii5Il8I91 : 1Iliil3I4LL11ii5Il8I95 {
- public string 1Iliil3I4LL11ii5Il8I92;
- public 1Iliil3I4LL11ii5Il8I91 ( string 1Iliil3I4LL11ii5Il8I93 ) : base ( 1Iliil3I4LL11ii5Il8I93 ) {
+namespace FruitExampleConsole {
+ public class Apple : Fruit {
+ public string description;
+ public Apple ( string name ) : base ( name ) {
  
-} public 1Iliil3I4LL11ii5Il8I91 ( string 1Iliil3I4LL11ii5Il8I93 , string 1Iliil3I4LL11ii5Il8I94 ) : base ( 1Iliil3I4LL11ii5Il8I93 , 1Iliil3I4LL11ii5Il8I94 ) {
+} public Apple ( string name , string color ) : base ( name , color ) {
  
 } public override string ToString ( ) {
- 1Iliil3I4LL11ii5Il8I92 = "Apple: " + 1Iliil3I4LL11ii5Il8I96 + "(" + 1Iliil3I4LL11ii5Il8I97 + ", " + 1Iliil3I4LL11ii5Il8I98 + ")";
- return 1Iliil3I4LL11ii5Il8I92;
+ description = "Apple: " + Name + "(" + Color + ", " + Taste + ")";
+ return description;
  
 } 
 } 
 } 
-namespace 1Iliil3I4LL11ii5Il8I90 {
- public class 1Iliil3I4LL11ii5Il8I95 : 1Iliil3I4LL11ii5Il8I912 {
- public string 1Iliil3I4LL11ii5Il8I96 {
+namespace FruitExampleConsole {
+ public class Fruit {
+ public string Name {
  get;
  private set;
  
-} public string 1Iliil3I4LL11ii5Il8I97 {
+} public string Color {
  get;
  set;
  
-} public string 1Iliil3I4LL11ii5Il8I98 {
+} public string Taste {
  get;
  set;
  
-} private int 1Iliil3I4LL11ii5Il8I99;
- public 1Iliil3I4LL11ii5Il8I95 ( string 1Iliil3I4LL11ii5Il8I93 ) {
- 1Iliil3I4LL11ii5Il8I96 = 1Iliil3I4LL11ii5Il8I93;
+} private int weight;
+ public Fruit ( string name ) {
+ Name = name;
  
-} public 1Iliil3I4LL11ii5Il8I95 ( string 1Iliil3I4LL11ii5Il8I93 , string 1Iliil3I4LL11ii5Il8I94 ) {
- 1Iliil3I4LL11ii5Il8I96 = 1Iliil3I4LL11ii5Il8I93;
- 1Iliil3I4LL11ii5Il8I97 = 1Iliil3I4LL11ii5Il8I94;
+} public Fruit ( string name , string color ) {
+ Name = name;
+ Color = color;
  
-} public void 1Iliil3I4LL11ii5Il8I910 ( int 1Iliil3I4LL11ii5Il8I99 ) {
- this.1Iliil3I4LL11ii5Il8I99 = 1Iliil3I4LL11ii5Il8I99;
+} public void SetWeightInGrams ( int w , int something ) {
+ this.weight = w + something;
  
-} public int 1Iliil3I4LL11ii5Il8I911 ( ) {
- return 1Iliil3I4LL11ii5Il8I99;
- 
-} 
-} 
-} 
-namespace 1Iliil3I4LL11ii5Il8I90 {
- public interface 1Iliil3I4LL11ii5Il8I912 {
- void 1Iliil3I4LL11ii5Il8I910 ( int 1Iliil3I4LL11ii5Il8I99 );
- int 1Iliil3I4LL11ii5Il8I911 ( );
+} public int GetWeightInGrams ( ) {
+ return weight;
  
 } 
 } 
-namespace 1Iliil3I4LL11ii5Il8I90 {
- class 1Iliil3I4LL11ii5Il8I913 {
- static void Main ( string [ ] 1Iliil3I4LL11ii5Il8I914 ) {
- var 1Iliil3I4LL11ii5Il8I915 = new 1Iliil3I4LL11ii5Il8I91 ( "Granny Smith" );
- second.1Iliil3I4LL11ii5Il8I99 = 1Iliil3I4LL11ii5Il8I99;
- var 1Iliil3I4LL11ii5Il8I916 = 1Iliil3I4LL11ii5Il8I915.1Iliil3I4LL11ii5Il8I911 ( );
+} 
+namespace FruitExampleConsole {
+ public interface IWeightable {
+ void SetWeightInGrams ( int weight );
+ int GetWeightInGrams ( );
+ 
+} 
+} 
+namespace FruitExampleConsole {
+ class Program {
+ static void Main ( string [ ] args ) {
+ var second = new Apple ( "Granny Smith" );
+ var smth = 210;
+ second.weight = 666 + smth;
+ var x = second.GetWeightInGrams ( );
  
 } 
 } 

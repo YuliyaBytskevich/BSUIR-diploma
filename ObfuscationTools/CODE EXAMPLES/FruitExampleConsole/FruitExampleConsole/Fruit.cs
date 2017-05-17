@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FruitExampleConsole
 {
-    public class Fruit: IWeightable
+    public class Fruit
     {
         public string Name { get; private set; }
 
@@ -27,9 +27,9 @@ namespace FruitExampleConsole
             Color = color;
         }
 
-        public void SetWeightInGrams(int weight)
+        public void SetWeightInGrams(int w, int something)
         {
-            this.weight = weight;
+            this.weight = w + something;
         }
 
         public int GetWeightInGrams()

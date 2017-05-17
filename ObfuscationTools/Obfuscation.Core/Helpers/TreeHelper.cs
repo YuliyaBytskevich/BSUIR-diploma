@@ -80,6 +80,17 @@ namespace Obfuscation.Core.Helpers
             return copy;
         }
 
+        public static ITerminalNode GetFirstTerminalNode(RuleContext node)
+        {
+            var current = node;
+            while (!(current.GetChild(0) is ITerminalNode))
+            {
+                current = (RuleContext)current.GetChild(0);
+            }
+
+            return (ITerminalNode)current.GetChild(0);
+        }
+
         private static IEnumerable<RuleContext> CheckChildrenIndexes(List<RuleContext> result, RuleContext current, IEnumerable<int> requiredIndexes)
         {
             if (current != null)

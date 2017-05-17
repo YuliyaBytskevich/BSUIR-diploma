@@ -16,7 +16,8 @@ namespace FruitExampleConsole
             var second = new Apple("Granny Smith");
             //second.Color = "green";
             //second.Taste = "sweet/sour";
-            second.SetWeightInGrams(210);
+            var smth = 210;
+            second.SetWeightInGrams(666, smth);
             var x = second.GetWeightInGrams();
 
             //IWeightable third = new Apple("Red prince");

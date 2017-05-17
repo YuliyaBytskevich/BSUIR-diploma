@@ -3,3 +3,9 @@ D:\VS Projects\FruitExampleConsole\FruitExampleConsole\bin\Debug\FruitExampleCon
 D:\VS Projects\FruitExampleConsole\FruitExampleConsole\bin\Debug\FruitExampleConsole.pdb
 D:\VS Projects\FruitExampleConsole\FruitExampleConsole\obj\Debug\FruitExampleConsole.exe
 D:\VS Projects\FruitExampleConsole\FruitExampleConsole\obj\Debug\FruitExampleConsole.pdb
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\FruitExampleConsole\bin\Debug\FruitExampleConsole.exe.config
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\FruitExampleConsole\obj\Debug\FruitExampleConsole.exe
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\FruitExampleConsole\obj\Debug\FruitExampleConsole.pdb
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\FruitExampleConsole\bin\Debug\FruitExampleConsole.exe
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\FruitExampleConsole\bin\Debug\FruitExampleConsole.pdb
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\FruitExampleConsole\obj\Debug\FruitExampleConsole.csprojResolveAssemblyReference.cache

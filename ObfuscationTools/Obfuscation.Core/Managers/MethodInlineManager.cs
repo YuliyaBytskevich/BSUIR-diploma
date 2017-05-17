@@ -70,7 +70,7 @@ namespace Obfuscation.Core.Managers
                 statementNode.RemoveLastChild();
                 statementNode.AddChild(copy);
 
-                // check if we need to replace 'this' with instance variable
+                //check if we need to replace 'this' with instance variable
                 var thisNodes = TreeHelper.GetDescendantNodesWithText(copy, "this");
                 if (thisNodes != null && thisNodes.Count() > 0)
                 {
@@ -84,16 +84,55 @@ namespace Obfuscation.Core.Managers
                 }
 
                 // check if we need to replace argument names with their values
-                IEnumerable<RuleContext> argumentsNodes = null;
                 if (context.ChildCount == 3)
                 {
-                    argumentsNodes = TreeHelper.GetDescendantNodes(context, "argument");
+                    // argument values from invocation
+                    var argumentRootNodes = TreeHelper.GetDescendantNodes(context, "argument");
+                    if (argumentRootNodes != null && argumentRootNodes.Count() > 0)
+                    {
+                        //var argmentValuesAndTypes = new Dictionary<string, string>();
+                        var argumentTerminals = new List<RuleContext>();
+                        foreach (var node in argumentRootNodes)
+                        {
+                            var terminalParent = (RuleContext)TreeHelper.GetFirstTerminalNode(node).Parent;
+                            //argmentValuesAndTypes.Add(terminal.GetText(), Mappers.CSParserState.IndexToName(((RuleContext)terminal.Parent).invokingState));
+                            argumentTerminals.Add(TreeHelper.GetDeepCopy(terminalParent));
+                        }
+
+                        // argument names from declaration 
+                        var argDeclarationNodes = TreeHelper.GetDescendantNodes(targetMethodNode, "arg_declaration");
+                        var argumentNames = new List<string>();
+
+                        if (argDeclarationNodes != null && argDeclarationNodes.Count() > 0)
+                        {                         
+                            foreach (var node in argDeclarationNodes)
+                            {
+                                var identifier = TreeHelper.GetDescendantNodes(node, "identifier").First().GetChild(0).GetText();
+                                argumentNames.Add(identifier);
+                            }
+
+                            var identifiers = TreeHelper.GetDescendantNodes(copy, "primary_expression_start");
+                            foreach (var identifier in identifiers)
+                            {
+                                if (!(identifier.GetChild(0) is ITerminalNode))
+                                {
+                                    var node = (RuleContext)identifier.GetChild(0);
+                                    if (Mappers.CSParserState.NameToIndex("identifier").Contains(node.invokingState))
+                                    {
+                                        var text = identifier.GetChild(0).GetChild(0).GetText();
+                                        if (argumentNames.Contains(text) && !Mappers.CSParserState.NameToIndex("member_access").Contains(identifier.invokingState))
+                                        {
+                                            var x = (CSParser.Primary_expression_startContext)identifier;
+                                            x.RemoveLastChild();
+                                             x.AddChild(argumentTerminals[argumentNames.IndexOf(text)]);
+
+                                        }
+                                    }
+                                }
+                            }           
+                        }
+                    }
                 }
-
-
-
-
-
             }
         }
     }
