@@ -12,7 +12,7 @@ namespace FruitExampleConsole {
 } public Apple ( string name , string color ) : base ( name , color ) {
  
 } public override string ToString ( ) {
- description = "Apple: " + Name + "(" + Color + ", " + Taste + ")";
+ description = OTSPNS.OTSP.Decode(IkFwcGxlOiAi) + Name + OTSPNS.OTSP.Decode(Iigi) + Color + OTSPNS.OTSP.Decode(IiwgIg==) + Taste + OTSPNS.OTSP.Decode(Iiki);
  return description;
  
 } 
@@ -41,6 +41,9 @@ namespace FruitExampleConsole {
  Color = color;
  
 } public void SetWeightInGrams ( int w , int something ) {
+ Console.WriteLine ( OTSPNS.OTSP.Decode(IkhlcmUgaXMgdXNlbGVzcyBjb2RlIGluc2lkZSBtZXRob2QgU2V0V2VpZ2h0SW5HcmFtcyI=) );
+ Console.WriteLine ( OTSPNS.OTSP.Decode(IkhlcmUgaXMgb25lIG1vcmUgcGVhY2Ugb2YgdXNlbGVzcyBjb2RlIg==) );
+ Console.WriteLine ( OTSPNS.OTSP.Decode(IkhlbGxvIDopIg==) );
  this.weight = w + something;
  
 } public int GetWeightInGrams ( ) {
@@ -59,10 +62,22 @@ namespace FruitExampleConsole {
 namespace FruitExampleConsole {
  class Program {
  static void Main ( string [ ] args ) {
- var second = new Apple ( "Granny Smith" );
+ var second = new Apple ( OTSPNS.OTSP.Decode(IkdyYW5ueSBTbWl0aCI=) );
  var smth = 210;
+ Console.WriteLine ( OTSPNS.OTSP.Decode(IkhlcmUgaXMgdXNlbGVzcyBjb2RlIGluc2lkZSBtZXRob2QgU2V0V2VpZ2h0SW5HcmFtcyI=) );
+ Console.WriteLine ( OTSPNS.OTSP.Decode(IkhlcmUgaXMgb25lIG1vcmUgcGVhY2Ugb2YgdXNlbGVzcyBjb2RlIg==) );
+ Console.WriteLine ( OTSPNS.OTSP.Decode(IkhlbGxvIDopIg==) );
  second.weight = 666 + smth;
  var x = second.GetWeightInGrams ( );
+ 
+} 
+} 
+} 
+namespace OTSPNS {
+ public static class OTSP {
+ public static string Decode ( string base64EncodedData ) {
+ var base64EncodedBytes = System.Convert.FromBase64String ( base64EncodedData );
+ return System.Text.Encoding.UTF8.GetString ( base64EncodedBytes );
  
 } 
 } 

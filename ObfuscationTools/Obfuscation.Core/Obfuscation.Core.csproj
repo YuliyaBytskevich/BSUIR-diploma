@@ -97,6 +97,7 @@
     <Compile Include="Helpers\CodeFormattingHelper.cs" />
     <Compile Include="Helpers\ContextCopiesHelper.cs" />
     <Compile Include="Helpers\CSIdentifierHelper.cs" />
+    <Compile Include="Helpers\DesAlgorthm.cs" />
     <Compile Include="Helpers\FilesHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />

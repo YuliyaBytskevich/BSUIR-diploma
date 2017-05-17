@@ -29,10 +29,22 @@ namespace Obfuscation.Core
                 code = ReadSources(cSharpFilePath);
                 Console.WriteLine(code);
 
+                if (config.ConstantStringsEncryption.IsEnabled)
+                {
+                    code += ConstantStringsManager.GetDecodingMethodDeclaration();
+                }
+
                 var tree = ParseCode(code);
                 Console.WriteLine("BEFORE: ");
-                //PrintPretty(tree, "", true);
+                PrintPretty(tree, "", true);
 
+
+
+                if (config.ConstantStringsEncryption.IsEnabled)
+                {
+                    var constantStringsVisitor = new ConstantStringsVisitor();
+                    tree = constantStringsVisitor.Visit(tree);
+                }
 
                 if (config.LoopUnrolling.IsEnabled)
                 {
@@ -60,7 +72,7 @@ namespace Obfuscation.Core
 
                 Console.WriteLine("-------------------------------------------------------\n\nAFTER:\n");
 
-                PrintPretty(tree, "", true);
+                //PrintPretty(tree, "", true);
                 Console.WriteLine(CodeFormattingHelper.CorrectCSFormatting(obfuscated));
                 FilesHelper.WriteToFile(CodeFormattingHelper.CorrectCSFormatting(obfuscated), cSharpFilePath + "_obf.cs");
 

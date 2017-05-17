@@ -29,6 +29,9 @@ namespace FruitExampleConsole
 
         public void SetWeightInGrams(int w, int something)
         {
+            Console.WriteLine("Here is useless code inside method SetWeightInGrams");
+            Console.WriteLine("Here is one more peace of useless code");
+            Console.WriteLine("Hello :)");
             this.weight = w + something;
         }
 
