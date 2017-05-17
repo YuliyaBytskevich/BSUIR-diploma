@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Obfuscation.Core.Mappers.CSParserRule">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Mappers\CSParserRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Mappers.CSParserState">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Mappers\CSParserState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Mappers.CSToken">
+    <Position X="2.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAgAAAgAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mappers\CSToken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

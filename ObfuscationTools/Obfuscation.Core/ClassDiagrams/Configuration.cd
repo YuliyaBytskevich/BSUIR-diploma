@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Obfuscation.Core.Configuration.CILObfuscatorSetting">
+    <Position X="0.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Configuration\CILObfuscatorSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Configuration.CILObfuscatorSettingsCollection">
+    <Position X="0.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\CILObfuscatorSettingsCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Configuration.CSObfuscatorSetting">
+    <Position X="2.5" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Configuration\CSObfuscatorSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Configuration.CSObfuscatorSettingsCollection">
+    <Position X="3.25" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\CSObfuscatorSettingsCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Configuration.ObfuscatorConfigSection">
+    <Position X="0.5" Y="0.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAIAAAAAAAAAAIQAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Configuration\ObfuscatorConfigSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

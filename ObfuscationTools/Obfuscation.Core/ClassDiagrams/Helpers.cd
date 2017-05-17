@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Obfuscation.Core.Helpers.CodeFormattingHelper">
+    <Position X="1" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Helpers\CodeFormattingHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Helpers.ContextCopiesHelper">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Helpers\ContextCopiesHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Helpers.CSIdentifierHelper">
+    <Position X="5.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAAAAAABAAAAAAgAAAAAAAAAAAAAEAABAA=</HashCode>
+      <FileName>Helpers\CSIdentifierHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Helpers.FilesHelper">
+    <Position X="1" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAABAAAAAAIAAAAAEAAAAgAAAAAA=</HashCode>
+      <FileName>Helpers\FilesHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Helpers.StringHelper">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\StringHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Helpers.TreeHelper">
+    <Position X="8" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAAAAAAgAAAQAAAAAAAAAQAIAAAABgAAAACAAQA=</HashCode>
+      <FileName>Helpers\TreeHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

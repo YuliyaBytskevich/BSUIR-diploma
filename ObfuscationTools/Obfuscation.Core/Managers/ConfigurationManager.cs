@@ -8,11 +8,11 @@ namespace Obfuscation.Core.Managers
     {
         private ObfuscatorConfigSection config = ObfuscatorConfigSection.GetConfig();
 
-        public Setting Renaming
+        public SettingWithParams Renaming
         {
             get
             {
-                return GetSetting("renaming");
+                return GetSettingsWithParams("renaming");
             }
         }
 
@@ -48,11 +48,11 @@ namespace Obfuscation.Core.Managers
             }
         }
 
-        public DetailedSetting ConstantStringsEncryption
+        public SettingWithParams ConstantStringsEncryption
         {
             get
             {
-                return GetDetailedSetting("constant_strings_encryption");
+                return GetSettingsWithParams("constant_strings_encryption");
             }
         }
 
@@ -106,13 +106,14 @@ namespace Obfuscation.Core.Managers
 
         private Setting GetSetting(string transformationKey)
         {
-            if (config == null || config.CSharpSettingsCollection == null || config.CSharpSettingsCollection.Count == 0)
+            if (config == null || 
+               (config.CSharpSettingsCollection == null && config.CILSettingsCollection == null) || 
+               (config.CSharpSettingsCollection.Count == 0 && config.CILSettingsCollection.Count == 0))
             {
                 throw new ConfigFormatException();
             }
 
             var setting = config.CSharpSettingsCollection[transformationKey];
-
             if (setting == null)
             {
                 throw new MissingConfigurationException(transformationKey);
@@ -129,15 +130,16 @@ namespace Obfuscation.Core.Managers
             }
         }
 
-        private DetailedSetting GetDetailedSetting(string transformationKey)
+        private SettingWithParams GetSettingsWithParams(string transformationKey)
         {
-            if (config == null || config.CSharpSettingsCollection == null || config.CSharpSettingsCollection.Count == 0)
+            if (config == null ||
+               (config.CSharpSettingsCollection == null && config.CILSettingsCollection == null) ||
+               (config.CSharpSettingsCollection.Count == 0 && config.CILSettingsCollection.Count == 0))
             {
                 throw new ConfigFormatException();
             }
 
             var setting = config.CSharpSettingsCollection[transformationKey];
-
             if (setting == null)
             {
                 throw new MissingConfigurationException(transformationKey);
@@ -146,7 +148,7 @@ namespace Obfuscation.Core.Managers
             bool isEnabled;
             if (bool.TryParse(setting.TransformationIsEnabled, out isEnabled))
             {
-                return new DetailedSetting(transformationKey, isEnabled, setting.Details);
+                return new SettingWithParams(transformationKey, isEnabled, setting.Parameters);
             }
             else
             {

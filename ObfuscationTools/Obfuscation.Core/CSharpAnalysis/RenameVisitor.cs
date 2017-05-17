@@ -8,10 +8,23 @@ namespace Obfuscation.Core.CSharpAnalysis
     {
         protected override Root DefaultResult { get { return root; } }
         private Root root = null;
+        private string newIdentifierBase;
+
+        public RenameVisitor(string newIdentifierBase)
+        {
+            if (!string.IsNullOrEmpty(newIdentifierBase))
+            {
+                this.newIdentifierBase = newIdentifierBase;
+            }
+            else
+            {
+                this.newIdentifierBase = "identifier";
+            }
+        }
 
         public override Root VisitCompilation_unit(Root context)
         {
-            IdentifiersGenerator.SetGenerator("a", 0);
+            IdentifiersGenerator.SetGenerator(newIdentifierBase, 0);
             this.root = context;
             return VisitChildren(root);
         }

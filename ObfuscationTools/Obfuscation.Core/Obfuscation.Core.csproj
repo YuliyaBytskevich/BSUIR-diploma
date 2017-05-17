@@ -84,7 +84,7 @@
     <Compile Include="Entities\CSharpIdentifiers\Method.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Namespace.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Property.cs" />
-    <Compile Include="Entities\DetailedSetting.cs" />
+    <Compile Include="Entities\SettingWithParams.cs" />
     <Compile Include="Entities\IdentifiersGenerator.cs" />
     <Compile Include="Entities\RenameItem.cs" />
     <Compile Include="Entities\RenameItemType.cs" />
@@ -106,6 +106,7 @@
     <Compile Include="Managers\ConfigurationManager.cs" />
     <Compile Include="Managers\ConstantStringsManager.cs" />
     <Compile Include="Managers\FunctionInterleavingManager.cs" />
+    <Compile Include="Managers\LogManager.cs" />
     <Compile Include="Managers\LoopUnrollingManager.cs" />
     <Compile Include="Managers\MethodInlineManager.cs" />
     <Compile Include="Managers\RedundantCodeManager.cs" />
@@ -126,7 +127,16 @@
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Obfuscation.Core.CSharpAnalysis</CustomToolNamespace>
     </Antlr4>
+    <None Include="ClassDiagrams\CilAnalysis.cd" />
+    <None Include="ClassDiagrams\Configuration.cd" />
+    <None Include="ClassDiagrams\CSharpAnalysis.cd" />
+    <None Include="ClassDiagrams\Entities.cd" />
+    <None Include="ClassDiagrams\Exceptions.cd" />
+    <None Include="ClassDiagrams\Helpers.cd" />
+    <None Include="ClassDiagrams\Managers.cd" />
+    <None Include="ClassDiagrams\Mappers.cd" />
     <None Include="packages.config" />
+    <None Include="ClassDiagrams\RootClasses.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

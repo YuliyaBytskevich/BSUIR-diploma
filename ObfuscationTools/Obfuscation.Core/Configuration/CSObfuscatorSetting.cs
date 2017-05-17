@@ -18,11 +18,11 @@ namespace Obfuscation.Core.Configuration
             set { this["enabled"] = value; }
         }
 
-        [ConfigurationProperty("details", DefaultValue = "", IsKey = true, IsRequired = false)]
-        public string Details
+        [ConfigurationProperty("parameters", DefaultValue = "", IsKey = false, IsRequired = false)]
+        public string Parameters
         {
-            get { return (string)this["details"]; }
-            set { this["details"] = value; }
+            get { return (string)this["parameters"]; }
+            set { this["parameters"] = value; }
         }
     }
 }

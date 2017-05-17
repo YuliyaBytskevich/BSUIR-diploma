@@ -8,5 +8,9 @@ namespace Obfuscation.Core.CilAnalysis
 {
     internal class CodeRestructurer
     {
+        public string AddUnreachableCode() { return null; }
+
+        public string AddRedundantCode() { return null; }
+
     }
 }

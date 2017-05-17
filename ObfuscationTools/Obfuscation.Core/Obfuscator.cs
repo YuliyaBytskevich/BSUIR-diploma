@@ -10,6 +10,7 @@ using Obfuscation.Core.Entities;
 using System.IO;
 using Obfuscation.Core.Managers;
 using System.Collections.Generic;
+using Obfuscation.Core.CilAnalysis;
 
 namespace Obfuscation.Core
 {
@@ -47,7 +48,8 @@ namespace Obfuscation.Core
 
                 if (config.Renaming.IsEnabled)
                 {
-                    var renameVisitor = new RenameVisitor();
+                    var param = config.Renaming.Params != null ? config.Renaming.Params[0] : null;
+                    var renameVisitor = new RenameVisitor(param);
                     tree = renameVisitor.Visit(tree);
                 }
 
@@ -110,7 +112,8 @@ namespace Obfuscation.Core
         #region ICilObfuscator members
         public void ObfuscateCilCode(string exeFilePath)
         {
-            throw new NotImplementedException();
+            var controlFlowManager = new CodeRestructurer();
+            var codeManager = new CodeRestructurer();
         }
 
         public string RestructControlFlow(string cilCode)

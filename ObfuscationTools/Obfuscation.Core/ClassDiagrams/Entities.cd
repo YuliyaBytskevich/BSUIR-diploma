@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Arg">
+    <Position X="3.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Arg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Class">
+    <Position X="3.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Class.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Constant">
+    <Position X="5.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Constant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Constructor">
+    <Position X="5.75" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Constructor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Field">
+    <Position X="5.75" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Identifier">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAgAAAAAAAAAggQAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Identifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Indexer">
+    <Position X="3.5" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Indexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Interface">
+    <Position X="5.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Interface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.InterfaceMember">
+    <Position X="5.75" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\InterfaceMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.LocalConstant">
+    <Position X="5.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\LocalConstant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.LocalVariable">
+    <Position X="3.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\LocalVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Method">
+    <Position X="3.5" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAggAAACAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Method.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Namespace">
+    <Position X="5.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Namespace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.CSharpIdentifiers.Property">
+    <Position X="3.5" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CSharpIdentifiers\Property.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.DetailedSetting">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\DetailedSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.IdentifiersGenerator">
+    <Position X="8.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAABQAAAAAAQAAAAgAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Entities\IdentifiersGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.RenameItem">
+    <Position X="8.5" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAIAAAAAAABAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Entities\RenameItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.RenameTable">
+    <Position X="8.5" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIAEAAAABAAEAEAEAAAAAAAAAEAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Entities\RenameTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obfuscation.Core.Entities.Setting">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Entities\Setting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CSharpTransformationType">
+    <Position X="10.25" Y="8.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgACAAAAAQEAIAAAAAAAAAAAAABAAAAACAIACA=</HashCode>
+      <FileName>Entities\CSharpTransformationType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Obfuscation.Core.Entities.RenameItemType">
+    <Position X="8.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAABEAAAAAAAAAAAAJgAAAAAAAAIJgAAAAAAQACgCA=</HashCode>
+      <FileName>Entities\RenameItemType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
