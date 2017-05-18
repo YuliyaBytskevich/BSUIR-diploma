@@ -51,17 +51,6 @@ namespace Obfuscation.Core.Entities
             return collection.Any(x => x.OriginalName == originalName && x.Type == type);
         }
 
-
-        public static bool ContainsOriginal(string originalName)
-        {
-            return collection.Any(x => x.OriginalName == originalName);
-        }
-
-        public static bool ContainsOriginal(string originalName, string location)
-        {
-            return collection.Any(x => x.OriginalName == originalName && x.Location == location);
-        }
-
         public static bool ContainsGenerated(string generatedName)
         {
             return collection.Any(x => x.GeneratedName == generatedName);
@@ -71,17 +60,7 @@ namespace Obfuscation.Core.Entities
         {
             return collection.Any(x => x.GeneratedName == generatedName && x.Type == type);
         }
-
-        public static string GetGenerated(string originalName)
-        {
-            if (ContainsOriginal(originalName))
-            {
-                return collection.FirstOrDefault(x => x.OriginalName == originalName).GeneratedName;
-            }
-
-            return null;
-        }
-
+    
         public static string GetGenerated(string originalName, RenameItemType type)
         {
             if (ContainsOriginal(originalName, type))
@@ -109,17 +88,6 @@ namespace Obfuscation.Core.Entities
             if (item != null)
             {
                 return item.OriginalName;
-            }
-
-            return null;
-        }
-
-        public static string GetGenerated(string originalName, string location)
-        {
-            var found = collection.FirstOrDefault(x => x.OriginalName == originalName && x.Location == location);
-            if (found != null)
-            {
-                return found.GeneratedName;
             }
 
             return null;
