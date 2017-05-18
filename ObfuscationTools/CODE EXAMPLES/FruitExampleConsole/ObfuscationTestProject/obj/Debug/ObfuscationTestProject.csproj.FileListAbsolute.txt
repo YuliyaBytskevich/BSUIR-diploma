@@ -1,0 +1,6 @@
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\ObfuscationTestProject\bin\Debug\ObfuscationTestProject.exe.config
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\ObfuscationTestProject\bin\Debug\ObfuscationTestProject.exe
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\ObfuscationTestProject\bin\Debug\ObfuscationTestProject.pdb
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\ObfuscationTestProject\obj\Debug\ObfuscationTestProject.csprojResolveAssemblyReference.cache
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\ObfuscationTestProject\obj\Debug\ObfuscationTestProject.exe
+C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\CODE EXAMPLES\FruitExampleConsole\ObfuscationTestProject\obj\Debug\ObfuscationTestProject.pdb

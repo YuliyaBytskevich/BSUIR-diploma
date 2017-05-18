@@ -11,6 +11,7 @@ namespace Obfuscation.Core.Managers
     {
         public static void TryToRenameIdentifier(CSParser.IdentifierContext context, Root rootContext)
         {
+            var savedName = context.GetChild(0).GetText();
             var identifier = GetConcreteTypedIdentifier(context, rootContext);
             if (identifier != null)
             {

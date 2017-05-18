@@ -2,11 +2,15 @@
 using Obfuscation.Core.CSharpAnalysis;
 using Obfuscation.Core.Helpers;
 using Root = Obfuscation.Core.CSharpAnalysis.CSParser.Compilation_unitContext;
+using Antlr4.Runtime.Tree;
+using Antlr4.Runtime;
 
 namespace Obfuscation.Core.Entities.CSharpIdentifiers
 {
     internal class Class : Identifier
     {
+        private static CommonTokenFactory tokenFactory = new CommonTokenFactory();
+
         public Class(Root root) : base(root) { }
 
         public override RenameItem RenameOnDeclaration(CSParser.IdentifierContext context)
@@ -68,6 +72,19 @@ namespace Obfuscation.Core.Entities.CSharpIdentifiers
                         {
                             CSIdentifierHelper.ChangeName(identifierNode, renamedItem.GeneratedName);
                         }
+                    }
+                }
+
+                // and also in string literals (for constant strings decoding mostly)
+                var stringLiterals = TreeHelper.GetDescendantNodes(root, "string_literal");
+                foreach (var literal in stringLiterals)
+                {
+                    if (literal.GetChild(0).GetText().Contains(renamedItem.OriginalName + "."))
+                    {
+                        var newLiteral = literal.GetChild(0).GetText().Replace(renamedItem.OriginalName, renamedItem.GeneratedName);
+                        var newLeaf = new TerminalNodeImpl(tokenFactory.Create(Mappers.CSToken.TypeNameToIndex("string_literal"), newLiteral));
+                        ((CSParser.String_literalContext)literal).RemoveLastChild();
+                        ((CSParser.String_literalContext)literal).AddChild(newLeaf);
                     }
                 }
             }

@@ -17,6 +17,7 @@ namespace Obfuscation.Core.Managers
         public static void TryToHideConstantString(ParserRuleContext context, Root rootContext)
         {
             var encoded = Base64Encode(context.GetChild(0).GetText());
+            encoded = "\"" + encoded + "\"";
 
             var newLeaf = new TerminalNodeImpl(tokenFactory.Create(Mappers.CSToken.TypeNameToIndex("string"), GetDecodingMethodUsage(encoded)));
             ((CSParser.String_literalContext)context).RemoveLastChild();

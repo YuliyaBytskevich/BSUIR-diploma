@@ -1,4 +1,5 @@
-﻿using System;
+﻿// файл Fruit.cs
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FruitExampleConsole
 {
-    public class Fruit
+    public class Fruit: IWeightable
     {
         public string Name { get; private set; }
 
@@ -14,7 +15,7 @@ namespace FruitExampleConsole
 
         public string Taste { get; set; }
 
-        private int weight;
+        public int weight;
 
         public Fruit(string name)
         {
@@ -27,12 +28,12 @@ namespace FruitExampleConsole
             Color = color;
         }
 
-        public void SetWeightInGrams(int w, int something)
+        public void SetWeightInGrams(int weight, int fault)
         {
             Console.WriteLine("Here is useless code inside method SetWeightInGrams");
             Console.WriteLine("Here is one more peace of useless code");
             Console.WriteLine("Hello :)");
-            this.weight = w + something;
+            this.weight = weight + fault;
         }
 
         public int GetWeightInGrams()

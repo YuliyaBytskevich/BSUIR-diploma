@@ -10,6 +10,7 @@ namespace Obfuscation.Core.Entities.CSharpIdentifiers
 {
     internal class Method : Identifier
     {
+        private static CommonTokenFactory tokenFactory = new CommonTokenFactory();
         private List<string> ignoreMethods = new List<string>() { "Main", "ToString", "GetHashCode", "Equals", "GetType"};
 
         public Method(Root root) : base(root) { }
@@ -38,6 +39,19 @@ namespace Obfuscation.Core.Entities.CSharpIdentifiers
                         {
                             CSIdentifierHelper.ChangeName(identifier, renamedItem.GeneratedName);
                         }
+                    }
+                }
+
+                // and also in string literals (for constant strings decoding mostly)
+                var stringLiterals = TreeHelper.GetDescendantNodes(root, "string_literal");
+                foreach (var literal in stringLiterals)
+                {
+                    if (literal.GetChild(0).GetText().Contains("." + renamedItem.OriginalName))
+                    {
+                        var newLiteral = literal.GetChild(0).GetText().Replace(renamedItem.OriginalName, renamedItem.GeneratedName);
+                        var newLeaf = new TerminalNodeImpl(tokenFactory.Create(Mappers.CSToken.TypeNameToIndex("string_literal"), newLiteral));
+                        ((CSParser.String_literalContext)literal).RemoveLastChild();
+                        ((CSParser.String_literalContext)literal).AddChild(newLeaf);
                     }
                 }
             }

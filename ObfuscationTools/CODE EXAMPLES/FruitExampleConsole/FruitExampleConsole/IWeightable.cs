@@ -1,4 +1,6 @@
-﻿using System;
+﻿// файл IWeightable.cs
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,7 @@ namespace FruitExampleConsole
 {
     public interface IWeightable
     {
-        void SetWeightInGrams(int weight);
+        void SetWeightInGrams(int weight, int fault);
         
         int GetWeightInGrams();
     }

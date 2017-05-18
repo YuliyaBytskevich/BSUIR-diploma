@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitExampleConsole", "FruitExampleConsole\FruitExampleConsole.csproj", "{96D967E3-1A72-4252-918C-6E7EBC4771F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObfuscationTestProject", "ObfuscationTestProject\ObfuscationTestProject.csproj", "{16DC3FA7-7A87-4E3E-8301-D0D69D40177B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{96D967E3-1A72-4252-918C-6E7EBC4771F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D967E3-1A72-4252-918C-6E7EBC4771F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96D967E3-1A72-4252-918C-6E7EBC4771F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16DC3FA7-7A87-4E3E-8301-D0D69D40177B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16DC3FA7-7A87-4E3E-8301-D0D69D40177B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16DC3FA7-7A87-4E3E-8301-D0D69D40177B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16DC3FA7-7A87-4E3E-8301-D0D69D40177B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

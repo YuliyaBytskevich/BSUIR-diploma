@@ -77,9 +77,10 @@ namespace Obfuscation.Core.Managers
                     var instanceVariableName = context.parent.GetChild(0).GetChild(0).GetText();
                     foreach (var thisNode in thisNodes)
                     {
-                        var newLeaf = new TerminalNodeImpl(tokenFactory.Create(Mappers.CSToken.TypeNameToIndex("identifier"), instanceVariableName));
+                        var newIdentifier = new CSParser.IdentifierContext((ParserRuleContext)thisNode, Mappers.CSParserState.NameToIndex("identifier").First());
+                        newIdentifier.AddChild(new TerminalNodeImpl(tokenFactory.Create(Mappers.CSToken.TypeNameToIndex("identifier"), instanceVariableName)));
                         ((CSParser.ThisReferenceExpressionContext)thisNode).RemoveLastChild();
-                        ((CSParser.ThisReferenceExpressionContext)thisNode).AddChild(newLeaf);
+                        ((CSParser.ThisReferenceExpressionContext)thisNode).AddChild(newIdentifier);
                     }
                 }
 

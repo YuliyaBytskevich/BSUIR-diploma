@@ -1,4 +1,5 @@
-﻿using System;
+﻿// файл program.cs
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,17 @@ namespace FruitExampleConsole
     {
         static void Main(string[] args)
         {
-            //var first = new Apple("Golden", "yellow");
-            //first.Taste = "sweet";
+            var first = new Apple("Golden", "yellow");
+            first.Taste = "sweet";
 
             var second = new Apple("Granny Smith");
-            //second.Color = "green";
-            //second.Taste = "sweet/sour";
-            var smth = 210;
-            second.SetWeightInGrams(666, smth);
+            second.Color = "green";
+            second.Taste = "sweet/sour";
+            var someIntValue = 20;
+            second.SetWeightInGrams(168, someIntValue);
             var x = second.GetWeightInGrams();
 
-            //IWeightable third = new Apple("Red prince");
+            IWeightable third = new Apple("Red prince");
         }
     }
 }

@@ -51,6 +51,12 @@ namespace Obfuscation.Core.Entities
             return collection.Any(x => x.OriginalName == originalName && x.Type == type);
         }
 
+
+        public static bool ContainsOriginal(string originalName)
+        {
+            return collection.Any(x => x.OriginalName == originalName);
+        }
+
         public static bool ContainsOriginal(string originalName, string location)
         {
             return collection.Any(x => x.OriginalName == originalName && x.Location == location);
@@ -64,6 +70,16 @@ namespace Obfuscation.Core.Entities
         public static bool ContainsGenerated(string generatedName, RenameItemType type)
         {
             return collection.Any(x => x.GeneratedName == generatedName && x.Type == type);
+        }
+
+        public static string GetGenerated(string originalName)
+        {
+            if (ContainsOriginal(originalName))
+            {
+                return collection.FirstOrDefault(x => x.OriginalName == originalName).GeneratedName;
+            }
+
+            return null;
         }
 
         public static string GetGenerated(string originalName, RenameItemType type)
@@ -117,13 +133,13 @@ namespace Obfuscation.Core.Entities
         public static string ToString()
         {
             string result = "";
-            result += "+--------------------+------------------------------+--------------------+--------------------------------------------------------------------------------+\n";
-            result += "|        TYPE        |           ORIGINAL           |     OBFUSCATED     |                                   LOCATION                                     |\n";
-            result += "+--------------------+------------------------------+--------------------+--------------------------------------------------------------------------------+\n";
+            result += "+--------------------+------------------------------+------------------------------+--------------------------------------------------------------------------------+\n";
+            result += "|        TYPE        |           ORIGINAL           |          OBFUSCATED          |                                   LOCATION                                     |\n";
+            result += "+--------------------+------------------------------+------------------------------+--------------------------------------------------------------------------------+\n";
             foreach(var item in collection)
             {
-                result += string.Format("|{0}|{1}|{2}|{3}|\n", StringHelper.FitLength(item.Type.ToString(), 20), StringHelper.FitLength(item.OriginalName, 30), StringHelper.FitLength(item.GeneratedName, 20), StringHelper.FitLength(item.Location, 80));
-                result += "+--------------------+------------------------------+--------------------+--------------------------------------------------------------------------------+\n";
+                result += string.Format("|{0}|{1}|{2}|{3}|\n", StringHelper.FitLength(item.Type.ToString(), 20), StringHelper.FitLength(item.OriginalName, 30), StringHelper.FitLength(item.GeneratedName, 30), StringHelper.FitLength(item.Location, 80));
+                result += "+--------------------+------------------------------+------------------------------+--------------------------------------------------------------------------------+\n";
             }
 
             return result;
