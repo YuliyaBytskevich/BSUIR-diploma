@@ -15,6 +15,14 @@ namespace Obfuscation.Core.CSharpAnalysis
             return VisitChildren(root);
         }
 
+        public override Root VisitString_literal([NotNull] CSParser.String_literalContext context)
+        {
+            //ConstantStringsManager.TryToHideConstantString(context, root);
+            RedundantCodeManager.TryToAddRedundantCode(context, root);
+
+            return VisitChildren(context);
+        }
+
         public override Root VisitStatement([NotNull] CSParser.StatementContext context)
         {
             return base.VisitStatement(context);

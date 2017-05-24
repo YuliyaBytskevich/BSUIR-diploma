@@ -24,7 +24,7 @@ namespace FruitExampleConsole
             //IWeightable third = new Apple("Red prince");
             for (int i = 0; i < 44; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine("hello world !");
                 someIntValue += i;
             }
         }

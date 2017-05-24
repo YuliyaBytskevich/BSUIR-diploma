@@ -35,9 +35,13 @@ namespace Obfuscation.Core
 
                 var tree = ParseCode(code);
                 //Console.WriteLine("BEFORE: ");
-                PrintPretty(tree, "", true);
+                //PrintPretty(tree, "", true);
 
-
+                if (config.AddingRedundantCodeCS.IsEnabled)
+                {
+                    var codeRestructurngVisitor = new CodeRestructuringVisitor();
+                    tree = codeRestructurngVisitor.Visit(tree);
+                }
 
                 if (config.ConstantStringsEncryption.IsEnabled)
                 {
