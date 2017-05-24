@@ -24,11 +24,11 @@ namespace Obfuscation.Core.Managers
             }
         }
 
-        public Setting LoopUnrolling
+        public SettingWithParams LoopUnrolling
         {
             get
             {
-                return GetSetting("loop_unrolling");
+                return GetSettingsWithParams("loop_unrolling");
             }
         }
 

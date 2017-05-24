@@ -35,7 +35,7 @@ namespace Obfuscation.Core
 
                 var tree = ParseCode(code);
                 //Console.WriteLine("BEFORE: ");
-                //PrintPretty(tree, "", true);
+                PrintPretty(tree, "", true);
 
 
 
@@ -47,7 +47,11 @@ namespace Obfuscation.Core
 
                 if (config.LoopUnrolling.IsEnabled)
                 {
-                    var loopUnrollingVisitor = new LoopUnrollingVisitor();
+                    var stringParam = config.LoopUnrolling.Params != null ? config.LoopUnrolling.Params[0] : null;
+                    var intParam = 0;
+                    int.TryParse(stringParam, out intParam);
+
+                    var loopUnrollingVisitor = new LoopUnrollingVisitor(intParam);
                     tree = loopUnrollingVisitor.Visit(tree);
                 }
 
@@ -70,7 +74,7 @@ namespace Obfuscation.Core
 
                 Console.WriteLine("-------------------------------------------------------\n\nAFTER:\n");
 
-                PrintPretty(tree, "", true);
+                //PrintPretty(tree, "", true);
                 Console.WriteLine(CodeFormattingHelper.CorrectCSFormatting(obfuscated));
                 FilesHelper.WriteToFile(CodeFormattingHelper.CorrectCSFormatting(obfuscated), cSharpFilePath + "_obf.cs");
 

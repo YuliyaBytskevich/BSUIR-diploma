@@ -84,6 +84,7 @@
     <Compile Include="Entities\CSharpIdentifiers\Method.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Namespace.cs" />
     <Compile Include="Entities\CSharpIdentifiers\Property.cs" />
+    <Compile Include="Entities\DefaultValues.cs" />
     <Compile Include="Entities\SettingWithParams.cs" />
     <Compile Include="Entities\IdentifiersGenerator.cs" />
     <Compile Include="Entities\RenameItem.cs" />

@@ -18,7 +18,7 @@ namespace Obfuscation.Core.CSharpAnalysis
             }
             else
             {
-                this.newIdentifierBase = "identifier";
+                this.newIdentifierBase = DefaultValues.IdentifiersBaseString;
             }
         }
 
