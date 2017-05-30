@@ -15,9 +15,9 @@ namespace Obfuscation.Core.CSharpAnalysis
             return VisitChildren(root);
         }
 
-        public override Root VisitVariable_declarator([NotNull] CSParser.Variable_declaratorContext context)
+        public override Root VisitClass_member_declaration(CSParser.Class_member_declarationContext context)
         {
-            return base.VisitVariable_declarator(context);
+            return base.VisitClass_member_declaration(context);
         }
     }
 }

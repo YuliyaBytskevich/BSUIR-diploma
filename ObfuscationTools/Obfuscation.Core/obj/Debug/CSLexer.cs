@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\Obfuscation.Core\CSharpAnalysis\CSLexer.g4 by ANTLR 4.5.3
+// Generated from D:\diploma\ObfuscationTools\Obfuscation.Core\CSharpAnalysis\CSLexer.g4 by ANTLR 4.5.3
 
 // Unreachable code detected
 #pragma warning disable 0162

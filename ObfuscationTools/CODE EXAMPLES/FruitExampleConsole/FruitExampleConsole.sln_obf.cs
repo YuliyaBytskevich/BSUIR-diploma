@@ -12,7 +12,7 @@ namespace FruitExampleConsole {
 } public Apple ( string name , string color ) : base ( name , color ) {
  
 } public override string ToString ( ) {
- description = OTSPNS.OTSP.Decode("IkFwcCI=") + OTSPNS.OTSP.Decode("ImxlOiAi") + Name + OTSPNS.OTSP.Decode("IiI=") + OTSPNS.OTSP.Decode("Iigi") + Color + OTSPNS.OTSP.Decode("Iiwi") + OTSPNS.OTSP.Decode("IiAi") + Taste + OTSPNS.OTSP.Decode("IiI=") + OTSPNS.OTSP.Decode("Iiki");
+ description = "Apple: " + Name + "(" + Color + ", " + Taste + ")";
  return description;
  
 } 
@@ -41,9 +41,9 @@ namespace FruitExampleConsole {
  Color = color;
  
 } public void SetWeightInGrams ( int weight , int fault ) {
- Console.WriteLine ( OTSPNS.OTSP.Decode("IkhlcmUgaXMgIg==") + OTSPNS.OTSP.Decode("InVzZWxlc3MgIg==") + OTSPNS.OTSP.Decode("ImNvZGUgaW5zIg==") + OTSPNS.OTSP.Decode("ImlkZSBtZXRoIg==") + OTSPNS.OTSP.Decode("Im9kIFNldFdlIg==") + OTSPNS.OTSP.Decode("ImlnaHRJbkdyYW1zIg==") );
- Console.WriteLine ( OTSPNS.OTSP.Decode("IkhlcmUgaXMgb25lIG1vcmUgcGUi") + OTSPNS.OTSP.Decode("ImFjZSBvZiB1c2VsZXNzIGNvZGUi") );
- Console.WriteLine ( OTSPNS.OTSP.Decode("IkhlIg==") + OTSPNS.OTSP.Decode("ImxsIg==") + OTSPNS.OTSP.Decode("Im8gOiki") );
+ Console.WriteLine ( "Here is useless code inside method SetWeightInGrams" );
+ Console.WriteLine ( "Here is one more peace of useless code" );
+ Console.WriteLine ( "Hello :)" );
  this.weight = weight + fault;
  
 } public int GetWeightInGrams ( ) {
@@ -66,19 +66,10 @@ namespace FruitExampleConsole {
  for ( int i = 0;
  i < 44;
  i ++ ) {
- Console.WriteLine ( OTSPNS.OTSP.Decode("ImhlbGxvICI=") + OTSPNS.OTSP.Decode("IndvcmxkICEi") );
+ Console.WriteLine ( "hello world !" );
  someIntValue += i;
  
 } 
-} 
-} 
-} 
-namespace OTSPNS {
- public static class OTSP {
- public static string Decode ( string base64EncodedData ) {
- var base64EncodedBytes = System.Convert.FromBase64String ( base64EncodedData );
- return System.Text.Encoding.UTF8.GetString ( base64EncodedBytes );
- 
 } 
 } 
 }  
