@@ -13,6 +13,8 @@ namespace Obfuscation.Core.CSharpAnalysis
         public override Root VisitCompilation_unit(Root context)
         {
             this.root = context;
+            // call method of BogusClassesManager
+
             return VisitChildren(root);
         }
 
