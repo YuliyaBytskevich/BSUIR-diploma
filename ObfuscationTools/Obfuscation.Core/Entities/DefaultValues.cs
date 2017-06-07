@@ -8,8 +8,17 @@ namespace Obfuscation.Core.Entities
 {
     public static class DefaultValues
     {
-        public static string IdentifiersBaseString { get; } = "identifier";
+        private static string identifiersBaseString = "identifier";
+        private static int unrollingCount= 3;
+        private static string cSharpConfigSectionName = "CSharpTransformationSettings";
+        private static string cilConfigSectionName = "CilTransformationSettings";
 
-        public static int UnrollingCount { get; } = 3;
+        public static string IdentifiersBaseString { get { return identifiersBaseString; } }
+
+        public static int UnrollingCount { get { return unrollingCount; } }
+
+        public static string CSharpConfigSectionName { get { return cSharpConfigSectionName; } }
+
+        public static string CilConfigSectionName { get { return cilConfigSectionName; } }
     }
 }

@@ -10,6 +10,14 @@ namespace Obfuscation.Core.Managers
 {
     internal static class VariablesAssociationManager
     {
-        public static void TryToAssociateVariables(ParserRuleContext context, Root rootContext) { }
+        public static void TryToAssociateVariables(ParserRuleContext context, Root rootContext) 
+        {
+ 
+        }
+
+        private static string getType(ParserRuleContext declaredVariableContext)
+        {
+            return null;
+        }
     }
 }

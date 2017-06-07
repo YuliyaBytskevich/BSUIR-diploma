@@ -14,7 +14,7 @@ namespace Obfuscation.Core
 
         string InlineMethods(string cSharpCode, double inliningCoefficient = 1);
 
-        string UnrollLoops(string cSharpCode, double unrollingCoefficient = 1);
+        string UnrollLoops(string cSharpCode, int unrollingCoefficient = 1);
 
         string InterleaveFuctions(string cSharpCode, int interleavesCount = 1);
 

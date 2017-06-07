@@ -11,3 +11,19 @@ C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools\UI.Console\obj\Debug\UI.Co
 C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools — копия\UI.Console\bin\Debug\UI.Console.exe.config
 C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools — копия\UI.Console\obj\Debug\UI.Console.exe
 C:\Users\julia\Desktop\BSUIR.Diploma\ObfuscationTools — копия\UI.Console\obj\Debug\UI.Console.pdb
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\UI.Console.exe.config
+D:\diploma\ObfuscationTools\UI.Console\obj\Debug\UI.Console.exe
+D:\diploma\ObfuscationTools\UI.Console\obj\Debug\UI.Console.pdb
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\UI.Console.exe
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\UI.Console.pdb
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\Obfuscation.Core.dll
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\Antlr4.Runtime.dll
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\Obfuscation.Core.pdb
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\Antlr4.Runtime.xml
+D:\diploma\ObfuscationTools\UI.Console\obj\Debug\UI.Console.csprojResolveAssemblyReference.cache
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\Mono.Cecil.dll
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\ICSharpCode.Decompiler.dll
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\ICSharpCode.NRefactory.dll
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+D:\diploma\ObfuscationTools\UI.Console\bin\Debug\ICSharpCode.NRefactory.xml

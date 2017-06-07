@@ -7,11 +7,11 @@ using System.Configuration;
 
 namespace Obfuscation.Core.Configuration
 {
-    internal class ObfuscatorConfigSection: ConfigurationSection
+    internal class ObfuscatorConfigSection : ConfigurationSection
     {
         [ConfigurationProperty("CSharpTransformationSettings", IsDefaultCollection = false)]
         [ConfigurationCollection(typeof(CSObfuscatorSettingsCollection), AddItemName = "add")]
-        public CSObfuscatorSettingsCollection CSharpSectionItems => (CSObfuscatorSettingsCollection)this["CSharpTransformationSettings"];
+        public CSObfuscatorSettingsCollection CSharpSectionItems { get { return (CSObfuscatorSettingsCollection)this["CSharpTransformationSettings"]; } }
 
         public CSObfuscatorSettingsCollection CSharpSettingsCollection
         {
@@ -24,7 +24,7 @@ namespace Obfuscation.Core.Configuration
 
         [ConfigurationProperty("CilTransformationSettings", IsDefaultCollection = false)]
         [ConfigurationCollection(typeof(CILObfuscatorSettingsCollection), AddItemName = "add")]
-        public CSObfuscatorSettingsCollection SectionItems => (CSObfuscatorSettingsCollection)this["CilTransformationSettings"];
+        public CILObfuscatorSettingsCollection CILSectionItems { get { return (CILObfuscatorSettingsCollection)this["CilTransformationSettings"]; } }
 
         public CILObfuscatorSettingsCollection CILSettingsCollection
         {

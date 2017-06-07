@@ -1,13 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Obfuscation.Core.Exceptions
 {
-    public class MissingConfigurationException : Exception
+    public class MissingConfigurationException: Exception
     {
-        private static string exceptionTemplate = "App.config file contains no definition for required parameter: {0}. Please, fill App.config file according to all requirements.";
+        public MissingConfigurationException() : base("App.config file contains no obfuscation settings. This is required section. Please, fill App.config file according to all requirements.  See the documentation here: https://github.com/YuliyaBytskevich/BSUIR-diploma") { }
 
-        public MissingConfigurationException(string configElementName) : base(string.Format(exceptionTemplate, configElementName)) { }
+        private static string exceptionTemplate = "App.config file contains no {0} section. This section is required for applying transformations. Please, fill App.config file according to all requirements.  See the documentation here: https://github.com/YuliyaBytskevich/BSUIR-diploma";
 
-        public MissingConfigurationException(string configElementName, Exception innerException) : base(string.Format(exceptionTemplate, configElementName), innerException) { }
+        public MissingConfigurationException(string section) : base(string.Format(exceptionTemplate, section)) { }
+
+        public MissingConfigurationException(string section, Exception innerException) : base(string.Format(exceptionTemplate, section), innerException) { }
     }
 }
